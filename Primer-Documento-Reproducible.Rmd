@@ -1,7 +1,9 @@
 ---
 title: "Primer documento reproducible"
 author: "Leonardo Pérez Victorino"
-date: "2023-02-02"
+date: "'r format(Sys.Date(), '%A, %B, %d, %Y')'"
 output: html_document
 ---
 
+
+Primer documento reproducible
