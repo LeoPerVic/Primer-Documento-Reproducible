@@ -1,5 +1,6 @@
 ---
 title: "Primer documento reproducible"
+subtitle: "Summary Report for the_ **Mountain**_Region¨"
 author: "Leonardo Pérez Victorino"
 date: "`r format(Sys.Date(),'%A, %B, %d, %Y')`"
 output: html_document
