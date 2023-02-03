@@ -22,5 +22,94 @@ library(knitr)
 library(kableExtra)
 library(ggthemes)
 ```
+```{r}
+data("steak_survey", package="fivethirtyeight")
+view(steak_survey)
 
-Primer documento reproducible
+sdat <- na.omit(steak_survey) %>%
+  filter(region=="Mountain")
+```
+
+## Background
+
+In May 2014, Walt Hickey at
+[538.com](http://fivethirtyeight.com/) published an
+article entitled
+["How Americans Like Their Steak"](https://fivethirtyeight.com/features/how-americans-like-their-steak/). This article utilized survey data collected from 550 people which asked questions related to various risky activities, such as whether they speed in traffic, if they smoke or go skydiving, and if they prefer a riskier lottery. The survey also asked if they eat steak and if so, how they prefer their steak.
+
+## Purpose
+
+The "steak survey" dataset that was used for the ["How
+Americans Like Their
+Steak"](https://fivethirtyeight.com/features/how-americans-like-their-steak/) article, is available through
+the R package [`fivethirtyeight`](https://cran.r-
+project.org/web/packages/fivethirtyeight/index.html).
+Using this dataset, this article summarizes the steak
+preferences for the _**Mountain**_ Region of the
+United States by gender.
+
+For our summary presented here, a subset of the original steak survey was extracted to only include responses with no missing data and only included respondents from the _**Mountain**_ region of the US. The data subset used for our summary had `r nrow(sdat)` respondents.
+
+## Demographic Summary Tables
+
+The age categories of the `r nrow(sdat)` survey
+respondents were:
+
+```{r}
+# create table of the age categories
+tb <- sdat %>%
+  select(age) %>%
+  table() %>%
+  prop.table()*100
+
+# convert table to data frame
+dt <- as.data.frame(tb)
+
+# use kable from knitr package to make table
+# and use kable styling from kableExtra package
+knitr::kable(dt, format="html",
+             col.names=c("Ages","%"),
+             digits=2,
+             caption="Ages of Survey Respondents") %>%
+  kableExtra::kable_styling(bootstrap_options ="striped",
+                            full_width=FALSE)
+```
+The education levels of the `r nrow(sdat)` survey respondents were:
+
+```{r}
+# repeat for education
+tb <-sdat %>% 
+  select(educ) %>%
+  table() %>%
+  prop.table()*100
+
+dt <-as.data.frame(tb)
+
+knitr::kable(dt, format="html",
+             col.names=c("Education","%"),
+             digits=2,
+             caption="Education of Survey Respondents") %>%
+  kableExtra::kable_styling(bootstrap_options = "striped",
+                            full_width=FALSE)
+```
+
+
+The income levels of the `r nrow(sdat)` survey respondents were:
+
+```{r}
+# repeat for household income
+tb <-sdat %>% 
+  select(hhold_income) %>%
+  table() %>%
+  prop.table()*100
+
+dt <-as.data.frame(tb)
+
+knitr::kable(dt, format="html",
+             col.names=c("Income","%"),
+             digits=2,
+             caption="Income of Survey Respondents") %>%
+  kableExtra::kable_styling(bootstrap_options = "striped",
+                            full_width=FALSE)
+```
+

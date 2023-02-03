@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+author: "Leonardo Pérez Victorino"
+date: "2023-02-03"
+output: html_document
+---
+\begin{table}[]
+\begin{tabular}{lllllllllllllllll}
+\multicolumn{9}{l}{Opciones de vuelos redondos}                                                                                                                                                & \multicolumn{2}{l}{Ida}          & \multicolumn{2}{l}{Vuelta}       & \multicolumn{4}{l}{}                                   \\
+Opción & Aerolinea & Llegada            & Salida              & Lugar de Salida          & Escalas & Lugar de la escala 1  & Lugar de la escala 2      & Lugar de llegada                      & Hora de salida & Hora de llegada & Hora de salida & Hora de llegada & Vuelo Redondo & Precio      & Impuestos  & Total       \\
+1      & Iberia    & Lunes 5 de junio   & Lunes 12 de junio   & Oviedo, Asturias   (OVD) & 1       & Madrid, Barajas (MAD) & -                         & Ciudad de México,   Juarez Intl (MEX) & 06:40:00 a. m. & 02:40:00 p. m.  & 12:25:00 p. m. & 08:30:00 a. m.  & Si            & \$16,311.00 & \$1,140.00 & \$17,451.00 \\
+2      & Iberia    & Lunes 5 de junio   & Domingo 11 de junio & Oviedo, Asturias   (OVD) & 1       & Madrid, Barajas (MAD) & -                         & Ciudad de México,   Juarez Intl (MEX) & 06:40:00 a. m. & 02:40:00 p. m.  & 12:25:00 p. m. & 08:30:00 a. m.  & Si            & \$16,816.00 & \$1,140.00 & \$17,956.00 \\
+3      & Iberia    & Martes 6 de junio  & Domingo 11 de junio & Oviedo, Asturias   (OVD) & 1       & Madrid, Barajas (MAD) & -                         & Ciudad de México,   Juarez Intl (MEX) & 06:40:00 a. m. & 02:40:00 p. m.  & 12:25:00 p. m. & 08:30:00 a. m.  & Si            & \$17,639.11 & \$1,140.00 & \$18,779.11 \\
+4      & Iberia    & Martes 6  de junio & Lunes 12 de junio   & Oviedo, Asturias   (OVD) & 1       & Madrid, Barajas (MAD) & -                         & Ciudad de México,   Juarez Intl (MEX) & 06:40:00 a. m. & 02:40:00 p. m.  & 12:25:00 p. m. & 08:30:00 a. m.  & Si            & \$19,749.00 & \$1,140.00 & \$20,889.00 \\
+5      & Iberia    & Lunes 5 de junio   & Sabado 10 de junio  & Oviedo, Asturias   (OVD) & 1       & Madrid, Barajas (MAD) & -                         & Ciudad de México,   Juarez Intl (MEX) & 16:40:00 a. m. & 18:15:00 p. m.  & 14:00:00 p. m. & 17:00:00 a. m.  & Si            & \$22,443.00 & \$1,140.00 & \$23,583.00 \\
+6      & Avianca   & Lunes 5 de junio   & Domingo 11 de junio & Oviedo, Asturias   (OVD) & 2       & Madrid, Barajas (MAD) & Bogotá, El Dorado   (BOG) & Ciudad de México,   Juarez Intl (MEX) & 01:30:00 a. m. & 03:05:00 a. m.  & 02:00:00 p. m. & 05:00:00 p. m.  & Si            & \$22,650.00 & \$1,140.00 & \$23,790.00
+\end{tabular}
+\end{table}
